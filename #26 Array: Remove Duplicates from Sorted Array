@@ -5,6 +5,8 @@ class Solution:
         :rtype: int
         """
         count = 0
+        if not nums:
+            return 0
         for i in range(len(nums)):
             if nums[count] != nums[i]:
                 count += 1
