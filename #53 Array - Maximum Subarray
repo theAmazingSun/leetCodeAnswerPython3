@@ -1,5 +1,18 @@
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
+        if max(nums) < 0:
+            return max(nums)
+        temp, largest = 0, 0
+        for num in nums:
+            if temp > 0:
+                temp += num
+            else:
+                temp = num
+            largest = max(largest, temp)
+        return largest
+        
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
         
         """
         :type nums: List[int]
